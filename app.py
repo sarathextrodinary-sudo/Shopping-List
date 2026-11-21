@@ -4,6 +4,10 @@ import os
 
 import streamlit as st
 
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env before checking os.getenv!
+
 from src.agent import build_agent, chat
 
 st.set_page_config(page_title="AI Shopping Agent", page_icon="🛒")
